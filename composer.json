@@ -1,0 +1,20 @@
+{
+    "name": "freelancersinchina/gigi-music",
+    "description": "a toolbox for gigi's music",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "freelancersinchina",
+            "email": "openclazz@163.com"
+        }
+    ],
+    "require": {
+        "metowolf/meting": "^1.3"
+    },
+	"autoload":{
+		"psr-4":{
+			"Gigi\\":"src/"
+		}
+	}
+}
