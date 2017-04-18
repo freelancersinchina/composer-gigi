@@ -11,10 +11,10 @@ class GigiMusic{
 	public function __construct($type){
 
 		switch($type){
-		case GigiMusicType_Random:
+		case self::GigiMusicType_Random:
 			$this->provider = new GigiSequence();
 			break;
-		case GigiMusicType_Sequence:
+		case self::GigiMusicType_Sequence:
 		default:
 			$this->provider = new GigiRandom();
 			break;

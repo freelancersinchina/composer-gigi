@@ -1,11 +1,11 @@
 <?php
-namespace GigiMusic;
+namespace Gigi;
 use \Metowolf\Meting;
 
 abstract class MusicProvider{
 
 	public $singerName = "梁咏琪";
-	private $api;
+	protected $api;
 	public function __construct(){
 
 		$this->api = (new Meting('netease'))->format(true);
