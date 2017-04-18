@@ -8,6 +8,6 @@ class GigiRandom extends MusicProvider{
 		$data = json_decode($this->api->search($this->singerName),true);
 
 		shuffle($data);
-		return array_slice($data,0,$num);
+		return $this->processData(array_slice($data,0,$num));
 	}
 }

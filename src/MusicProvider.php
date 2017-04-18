@@ -13,4 +13,18 @@ abstract class MusicProvider{
 	}
 
 	abstract public function getFirst($num);
+	
+	protected function processData($data){
+
+		$self = $this;
+		return array_map(function($item) use ($self){
+
+			$item['pic_url'] = json_decode($self->api->pic($item['pic_id']),true)['url'];
+			$item['url'] = json_decode($self->api->url($item['url_id']),true)['url'];
+
+			return $item;
+		},$data);
+
+
+	}
 }
