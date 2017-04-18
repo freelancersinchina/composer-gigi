@@ -5,7 +5,7 @@ use \Metowolf\Meting;
 
 class GigiRandom extends MusicProvider{
 	public function getFirst($num){
-		$data = json_decode($this->api->search($this->singerName));
+		$data = json_decode($this->api->search($this->singerName),true);
 
 		shuffle($data);
 		return array_slice($data,0,$num);
