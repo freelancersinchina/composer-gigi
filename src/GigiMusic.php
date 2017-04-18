@@ -12,11 +12,11 @@ class GigiMusic{
 
 		switch($type){
 		case self::GigiMusicType_Random:
-			$this->provider = new GigiSequence();
+			$this->provider = new GigiRandom();
 			break;
 		case self::GigiMusicType_Sequence:
 		default:
-			$this->provider = new GigiRandom();
+			$this->provider = new GigiSequence();
 			break;
 		}
 
